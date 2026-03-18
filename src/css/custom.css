@@ -1,0 +1,61 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  /* Primary (soft black scale) */
+  --ifm-color-primary: #1f1f1f;
+  --ifm-color-primary-dark: #1a1a1a;
+  --ifm-color-primary-darker: #141414;
+  --ifm-color-primary-darkest: #0f0f0f;
+  --ifm-color-primary-light: #333333;
+  --ifm-color-primary-lighter: #4d4d4d;
+  --ifm-color-primary-lightest: #666666;
+
+  /* Base UI */
+  --ifm-background-color: #f8f9fa;
+  --ifm-font-color-base: #1f1f1f;
+
+  /* Subtle surfaces */
+  --ifm-card-background-color: #fafafa;
+  --ifm-hover-overlay: rgba(0, 0, 0, 0.04);
+
+  /* Borders */
+  --ifm-toc-border-color: #e6e6e6;
+  --ifm-hr-border-color: #e6e6e6;
+
+  /* Code */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.06);
+}
+
+/* Dark mode (not pure black — deep gray system) */
+[data-theme='dark'] {
+  --ifm-color-primary: #e6e6e6;
+  --ifm-color-primary-dark: #cccccc;
+  --ifm-color-primary-darker: #b3b3b3;
+  --ifm-color-primary-darkest: #8c8c8c;
+  --ifm-color-primary-light: #f2f2f2;
+  --ifm-color-primary-lighter: #ffffff;
+  --ifm-color-primary-lightest: #ffffff;
+
+  /* Background layering (THIS is what most people get wrong) */
+  --ifm-background-color: #222831;        /* main */
+  --ifm-card-background-color: #393E46;   /* elevated */
+  --ifm-navbar-background-color: #1A1A1D; /* sticky areas */
+
+  --ifm-font-color-base: #e6e6e6;
+
+  /* Interaction */
+  --ifm-hover-overlay: rgba(255, 255, 255, 0.06);
+
+  /* Borders */
+  --ifm-toc-border-color: #262626;
+  --ifm-hr-border-color: #262626;
+
+  /* Code */
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.08);
+}
