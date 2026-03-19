@@ -59,3 +59,141 @@
   /* Code */
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.08);
 }
+
+.my-card-get {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #D9EAFD;
+  border: 1px solid #e2e8f0;
+  border-left: 1px solid #22c55e;
+  border-width: 0px 0px 0px 4px;
+}
+.my-card-post {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #F8FAFC;
+  border: 1px solid #e2e8f0;
+  border-left: 1px solid #eab308;
+  border-width: 0px 0px 0px 4px;
+}
+
+/* top row */
+.my-card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* API method badge */
+.api-method {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  color: white;
+}
+
+/* method variants */
+.api-method.GET {
+  background: #22c55e;
+}
+
+.api-method.POST {
+  background: #eab308;
+}
+
+.api-method.PUT {
+  background: #3b82f6;
+}
+
+.api-method.DELETE {
+  background: #ef4444;
+}
+
+/* endpoint text */
+.api-endpoint {
+  font-family: monospace;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+/* bottom text */
+.my-card-bottom {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* showing image on hero section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+  }
+}
+
+/* API response Viewer */
+.api-viewer {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #1e293b;
+  background: #0f172a;
+  font-family: monospace;
+}
+
+/* header like VSCode tab */
+.api-viewer-header {
+  background: #111829;
+  color: #BCCCDC;
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-bottom: 1px solid #1e293b;
+}
+
+/* code area */
+.api-viewer-code {
+  margin: 0;
+  padding: 14px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #6deda2;
+  background: #213145;
+  overflow-x: auto;
+}
+.key {
+  color: #93c5fd;
+}
+
+.string {
+  color: #86efac;
+}
+
+.number {
+  color: #fca5a5;
+}
