@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'breeze-pgw-doc',
   tagline: 'breeze',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {

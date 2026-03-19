@@ -24,11 +24,14 @@ description="demo description"
 | **qrString**  | string | MMQR-compliant QR payload string. Should be rendered as a QR code on the frontend for user scanning.                                                          |
 
 <ApiResponseViewer
-data={{
-    reference: "550e8400-e29b-41d4-a716-446655440000",
-    qrString: "000201010212..."
+  mode="response"
+  data={{
+    reference: "123",
+    amount: 1000,
   }}
 />
+
+
 
 ---
 

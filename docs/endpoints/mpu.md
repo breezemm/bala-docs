@@ -16,9 +16,6 @@ endpoint="{api_endpoint}/merchant/pay/mpu/generate"
 description="Required amount and currency_code"
 />
 
-<div className="hero-section">
-  <div className="hero-text">
-
 ## Response Attributes
 
 | Attribute | Type   | Details              |
@@ -28,26 +25,31 @@ description="Required amount and currency_code"
 
 #### data object
 
-| Attribute        | Type   | Details                           |
-| :--------------- | :----- | :-------------------------------- |
-| **merchantID**   | string | Payment amount                    |
-| **invoiceNo**    | string | Payment amount                    |
-| **productDesc**  | string | Payment amount                    |
-| **amount**       | string | Payment amount                    |
-| **currencyCode** | string | Currency code (e.g. `MMK`, `USD`) |
-| **hashValue**    | string | Currency code (e.g. `MMK`, `USD`) |
+| Attribute        | Type   | Details                                                                                             |
+| :--------------- | :----- | :-------------------------------------------------------------------------------------------------- |
+| **merchantID**   | string | Payment amount                                                                                      |
+| **invoiceNo**    | string | Payment amount                                                                                      |
+| **productDesc**  | string | Payment amount                                                                                      |
+| **amount**       | string | Payment amount                                                                                      |
+| **currencyCode** | string | Currency code (e.g. `MMK`, `USD`)                                                                   |
+| **hashValue**    | string | MMQR-compliant QR payload string. Should be rendered as a QR code on the frontend for user scanning |
 
-</div>
-
-  <div className="hero-image">
-   <ApiResponseViewer
-data={{
-    reference: "550e8400-e29b-41d4-a716-446655440000",
-    qrString: "000201010212..."
+<ApiResponseViewer
+mode="schema"
+schema={{
+    url: "htwwpogeoo",
+    data: {
+        merchantID: "123",
+        invoiceNo: "123",
+        productDesc: "123",
+        amount: 1223,
+        currencyCode: "123",
+        hashValue:"13"
+    },
   }}
 />
-  </div>
-</div>
+
+
 
 ---
 

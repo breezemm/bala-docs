@@ -16,7 +16,7 @@ Our API provides a seamless way to accept payments from customers worldwide. Use
 </div>
 
   <div className="hero-image">
-    <img src="/img/docusaurus.png" alt="Payment preview" />
+    <img src="/img/welcome-image.png" alt="Payment preview" />
   </div>
 </div>
 
