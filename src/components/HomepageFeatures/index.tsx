@@ -11,32 +11,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Universal Integration',
+    Svg: require('@site/static/img/landing_img1.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        One unified API to process all major payment methods including MMQR, MPU, and international credit cards seamlessly.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Secure & Reliable',
+    Svg: require('@site/static/img/landing_img2.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Bank-grade security and advanced encryption mean your merchants and customers can transact safely with 99.9% uptime.
       </>
     ),
   },
   {
-    title: 'Powered by breeze',
-    Svg: require('@site/static/img/undraw_progressive.svg').default,
+    title: 'Developer Friendly',
+    Svg: require('@site/static/img/landing_img3.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Comprehensive API references, clear code snippets, and helpful guides get you up and running in just minutes.
       </>
     ),
   },
