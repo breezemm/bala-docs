@@ -6,9 +6,16 @@ sidebar_position: 2
 import Card from '@site/src/components/Card';
 import ApiResponseViewer from '@site/src/components/ApiResponseViewer';
 
-Retrieve comprehensive metadata and operational status for a specific project within your workspace. This endpoint provides deep visibility into creation timelines, owner details, and environment configurations.
+Initiate and process transactions through the Myanmar Payment Union (MPU) network. These endpoints enable merchants to generate MPU payment requests, providing secure checkout URLs or prebuilt payment forms for seamless customer payments.
 
-### Generate Method
+## COUNTRY CURRENCY CODES
+
+| Country | Currency  | Currency Code | Number |
+| :------ | :-------- | :------------ | :----- |
+| Myanmar | Kyat      | MMK           | 104    |
+| USD     | US Dollar | USD           | 840    |
+
+## Generate Method
 
 <Card
 method="POST"
@@ -16,7 +23,9 @@ endpoint="{api_endpoint}/merchant/pay/mpu/generate"
 description="Required amount and currency_code"
 />
 
-## Response Attributes
+
+
+### Response Attributes
 
 | Attribute | Type   | Details              |
 | :-------- | :----- | :------------------- |
@@ -37,19 +46,21 @@ description="Required amount and currency_code"
 <ApiResponseViewer
 mode="schema"
 schema={{
-    url: "htwwpogeoo",
-    data: {
-        merchantID: "123",
-        invoiceNo: "123",
-        productDesc: "123",
-        amount: 1223,
-        currencyCode: "123",
-        hashValue:"13"
-    },
-  }}
+    "status": 1,
+    "message": "success.",
+    "data": {
+        "url": "https://www.mpuecomuat.com/UAT/Payment/Payment/pay",
+        "form": {
+            "merchantID": "214104001711381",
+            "invoiceNo": "TBM1-17742485004406",
+            "productDesc": "#3 ahlu",
+            "amount": "000000100000",
+            "currencyCode": "104",
+            "hashValue": "1AFBCC9C78BDB93C51C95727B895CF0BB3762FB8"
+        }
+    }
+}}
 />
-
-
 
 ---
 
@@ -58,10 +69,24 @@ schema={{
 <Card
 method="POST"
 endpoint="{api_endpoint}/merchant/pay/mpu/prebuilt"
-description="demo description"
+description="Required amount and currency_code"
 />
 
-## Response Attributes
+### Response Attributes
 
-| Arrtibute | Type | Detail |
-| :-------- | :--- | :----- |
+| Arrtibute | Type   | Detail               |
+| :-------- | :----- | :------------------- |
+| reference | string | Reference number     |
+| url       | string | Payment redirect URL |
+
+<ApiResponseViewer
+mode="schema"
+schema={{
+    "status": 1,
+    "message": "success.",
+    "data": {
+        "reference": "TBM1-17742486277375",
+        "url": "{{api_endpoint}}/prebuilt/pay/mpu?code=Gzg4S27mI11BP3..."
+    }
+}}
+/>

@@ -38,9 +38,7 @@ function HomepageHeader() {
           Integrate global payments in minutes. Explore our unified API to
           accept payments via MMQR, MPU, and more—effortlessly.
         </p>
-        <div style={{ marginTop: "1rem" }}>
-          <CtaButtons />
-        </div>
+       
       </div>
     </header>
   );

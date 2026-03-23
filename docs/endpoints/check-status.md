@@ -4,18 +4,19 @@ sidebar_position: 3
 ---
 
 import Card from '@site/src/components/Card';
+import ApiResponseViewer from '@site/src/components/ApiResponseViewer';
 
-Retrieve comprehensive metadata and operational status for a specific project within your workspace. This endpoint provides deep visibility into creation timelines, owner details, and environment configurations.
+Verify the real-time status of a specific transaction. This endpoint allows merchants to securely query the system to confirm whether a previously initiated payment is successful, pending, or failed.
 
-### Generate Method
+## Generate Method
 
 <Card
 method="POST"
 endpoint="{api_endpoint}/merchant/trx/check-status"
-description="Response a data object"
+description="reference string is required in form-data"
 />
 
-## Response Attributes
+### Response Attributes
 
 | Attribute    | Type   | Details                                                      |
 | :----------- | :----- | :----------------------------------------------------------- |
@@ -23,3 +24,16 @@ description="Response a data object"
 | **currency** | string | Currency code in ISO 4217 format (e.g. `MMK`)                |
 | **method**   | string | Payment method used (e.g. `MMQR`, `MPU`)                     |
 | **amount**   | int    | Total payment amount in smallest currency unit               |
+
+<ApiResponseViewer
+mode="schema"
+schema={{
+    data: {
+        status: "PENDING",
+        currency: "MMK",
+        method: "MMQR",
+        amount: 1000
+       
+    },
+  }}
+/>
