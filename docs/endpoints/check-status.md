@@ -13,7 +13,7 @@ Verify the real-time status of a specific transaction. This endpoint allows merc
 <Card
 method="POST"
 endpoint="{api_endpoint}/merchant/trx/check-status"
-description="reference string is required in form-data"
+description="reference / invoiceNo is required in form-data"
 />
 
 ### Response Attributes

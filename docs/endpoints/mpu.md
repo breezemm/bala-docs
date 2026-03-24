@@ -10,10 +10,10 @@ Initiate and process transactions through the Myanmar Payment Union (MPU) networ
 
 ## COUNTRY CURRENCY CODES
 
-| Country | Currency  | Currency Code | Number |
-| :------ | :-------- | :------------ | :----- |
-| Myanmar | Kyat      | MMK           | 104    |
-| USD     | US Dollar | USD           | 840    |
+| Country | Currency  | Code | Number |
+| :------ | :-------- | :--- | :----- |
+| Myanmar | Kyat      | MMK  | 104    |
+| USD     | US Dollar | USD  | 840    |
 
 ## Generate Method
 
@@ -23,24 +23,26 @@ endpoint="{api_endpoint}/merchant/pay/mpu/generate"
 description="Required amount and currency_code"
 />
 
+### Generate Request Body
 
+![MPU Generate Payment Image](/img/mpu-generate.png)
 
-### Response Attributes
+### Generate Response Attributes
 
 | Attribute | Type   | Details              |
 | :-------- | :----- | :------------------- |
 | **url**   | string | Payment redirect URL |
-| **data**  | object | Payment data object  |
+| **form**  | object | Payment data object  |
 
-#### data object
+#### form object
 
 | Attribute        | Type   | Details                                                                                             |
 | :--------------- | :----- | :-------------------------------------------------------------------------------------------------- |
-| **merchantID**   | string | Payment amount                                                                                      |
-| **invoiceNo**    | string | Payment amount                                                                                      |
-| **productDesc**  | string | Payment amount                                                                                      |
-| **amount**       | string | Payment amount                                                                                      |
-| **currencyCode** | string | Currency code (e.g. `MMK`, `USD`)                                                                   |
+| **merchantID**   | string | Merchant ID                                                                                         |
+| **invoiceNo**    | string | Invoice number                                                                                      |
+| **productDesc**  | string | Product description                                                                                 |
+| **amount**       | string | Amount                                                                                              |
+| **currencyCode** | string | Currency code in ISO 4217 format (e.g. `MMK`)                                                       |
 | **hashValue**    | string | MMQR-compliant QR payload string. Should be rendered as a QR code on the frontend for user scanning |
 
 <ApiResponseViewer
@@ -72,7 +74,11 @@ endpoint="{api_endpoint}/merchant/pay/mpu/prebuilt"
 description="Required amount and currency_code"
 />
 
-### Response Attributes
+### Prebuilt Request Body
+
+![MPU Prebuilt Payment Image](/img/mpu-prebuilt.png)
+
+### Prebuilt Response Attributes
 
 | Arrtibute | Type   | Detail               |
 | :-------- | :----- | :------------------- |
@@ -87,6 +93,6 @@ schema={{
     "data": {
         "reference": "TBM1-17742486277375",
         "url": "{{api_endpoint}}/prebuilt/pay/mpu?code=Gzg4S27mI11BP3..."
-    }
+}
 }}
 />

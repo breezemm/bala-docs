@@ -7,7 +7,7 @@ export default function CtaButtons() {
     <div style={{ display: "flex", gap: "1rem", margin: "2rem 0" }}>
       <Link
         className="button button--primary button--lg"
-        href="https://your-gateway-url.com"
+        href="https://breeze-pgw.tech-breeze.com.mm/auth/merchant/sign-in"
         target="_blank"
       >
         Go to Payment Gateway

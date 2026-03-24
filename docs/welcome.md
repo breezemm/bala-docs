@@ -14,7 +14,7 @@ Integrate global payments in minutes. Our API provides a seamless way to accept 
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 To begin integrating with the Breeze Payment Gateway, start by understanding our core principles and how to securely authenticate:
 
@@ -27,7 +27,7 @@ Your API keys carry many privileges and provide full access to your account. You
 
 ---
 
-## 💳 Payment Channels
+## Payment Channels
 
 We support multiple payment channels to fit your business operations in Myanmar and beyond. Explore our core endpoint references to start transacting:
 
@@ -37,6 +37,6 @@ We support multiple payment channels to fit your business operations in Myanmar 
 
 ---
 
-## ⚡ Making your first request
+## Making your first request
 
 Trigger a payment session by sending a POST request to the required payment method endpoint (e.g., <Highlight>/api/v1/payment/mmqr</Highlight>). Be sure to include your API key in the `Authorization` request header as described in the Authentication guide.

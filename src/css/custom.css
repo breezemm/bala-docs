@@ -127,7 +127,8 @@
 /* bottom text */
 .my-card-bottom {
   font-size: 0.75rem;
-  color: #64748b;
+  color: #c3303a;
+  font-weight: 500;
 }
 
 /* showing image on hero section */

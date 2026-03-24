@@ -8,15 +8,21 @@ import ApiResponseViewer from '@site/src/components/ApiResponseViewer';
 
 Generate and process payments using the Myanmar Quick Response (MMQR) standard. These endpoints enable merchants to dynamically generate MMQR payment payloads for instant scanning and seamless customer checkout.
 
+
+
+
 ## Generate Method
 
 <Card
 method="POST"
 endpoint="{api_endpoint}/merchant/pay/mmqr/generate"
-description="amount is required in form-data"
+description="amount is required in request body"
 />
+### Generate Request Body
 
-### Response Attributes
+![MMQR Payment Image](/img/mmqr-generate.png)
+
+### Generate Response Attributes
 
 | Attribute     | Type   | Detail                                                                                                                                                       |
 | :------------ | :----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -35,15 +41,18 @@ description="amount is required in form-data"
 
 ---
 
-## Prebuild Method
+## Prebuilt Method
 
 <Card
 method="POST"
 endpoint="{api_endpoint}/merchant/pay/mmqr/prebuilt"
-description="amount is required in form-data"
+description="amount is required in request body"
 />
+### Prebuilt Request Body
 
-### Response Attributes
+![MMQR Payment Image](/img/mmqr-prebuilt.png)
+
+### Prebuild Response Attributes
 
 | Attribute     | Type   | Detail                                                                                                                                                       |
 | :------------ | :----- | :------------------------------------------------------------------------------------------------------------------------------------------------------------ |
