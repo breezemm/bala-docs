@@ -13,7 +13,7 @@ export default function ApiResponseViewer({
   mode = "response",
   data,
   schema,
-  title = "Response",
+  title = "Response.json",
 }: Props) {
   const content =
     mode === "response" ? JSON.stringify(data, null, 2) : formatSchema(schema);
@@ -22,7 +22,7 @@ export default function ApiResponseViewer({
     <div className="api-viewer">
       <div className="api-viewer-header">
         <span>
-          {title}.json
+          {title}
         </span>
       </div>
 
