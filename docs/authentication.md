@@ -7,7 +7,9 @@ sidebar_position: 3
 
 Our API provides a seamless way to accept payments from customers worldwide. Use our unified integration to support different types of payment methods with a single code base.
 
-Every project in Breeze Payment Gateway requires configuring three main credentials and URLs to function properly. You can find and configure these in your Project Settings.
+To integrate the Breeze Payment Gateway into your application, you must first configure your project's security and callback parameters. Breeze utilizes a `Bearer Token Authentication` model to ensure that every request is encrypted and verified, preventing unauthorized access to your transaction data.
+
+To begin processing payments, navigate to Project Settings in your dashboard and configure the following three core components:
 
 ### 1. API Access Token
 Your API Access Token is the primary method of authenticating your requests. All API requests must include this token in the `Authorization` header as a Bearer token:

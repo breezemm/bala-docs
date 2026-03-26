@@ -8,19 +8,12 @@ import ApiResponseViewer from '@site/src/components/ApiResponseViewer';
 
 Initiate and process transactions through the Myanmar Payment Union (MPU) network. These endpoints enable merchants to generate MPU payment requests, providing secure checkout URLs or prebuilt payment forms for seamless customer payments.
 
-## COUNTRY CURRENCY CODES
-
-| Country | Currency  | Code | Number |
-| :------ | :-------- | :--- | :----- |
-| Myanmar | Kyat      | MMK  | 104    |
-| USD     | US Dollar | USD  | 840    |
-
 ## Generate Method
 
 <Card
 method="POST"
 endpoint="{api_endpoint}/merchant/pay/mpu/generate"
-description="Required amount and currency_code"
+description="amount is required in request body"
 />
 
 ### Generate Request Body
@@ -54,8 +47,8 @@ schema={{
         "url": "https://www.mpuecomuat.com/UAT/Payment/Payment/pay",
         "form": {
             "merchantID": "214104001711381",
-            "invoiceNo": "TBM1-17742485004406",
-            "productDesc": "#3 ahlu",
+            "invoiceNo": "TBM1-******",
+            "productDesc": "#3 ProjectDemo",
             "amount": "000000100000",
             "currencyCode": "104",
             "hashValue": "1AFBCC9C78BDB93C51C95727B895CF0BB3762FB8"
@@ -91,7 +84,7 @@ schema={{
     "status": 1,
     "message": "success.",
     "data": {
-        "reference": "TBM1-17742486277375",
+        "reference": "TBM1-******",
         "url": "{{api_endpoint}}/prebuilt/pay/mpu?code=Gzg4S27mI11BP3..."
 }
 }}
